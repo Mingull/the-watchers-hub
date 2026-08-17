@@ -1,0 +1,26 @@
+services:
+    mysql:
+        image: mysql:8.4.11
+        container_name: mysql-server-watchers-hub
+        restart: unless-stopped
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: watchers_hub
+            MYSQL_ROOT_HOST: "%"
+        ports:
+            - "127.0.0.1:3306:3306"
+        volumes:
+            - mysql-data:/var/lib/mysql
+        healthcheck:
+            test: [ "CMD-SHELL", "mysqladmin ping -h localhost --silent" ]
+            interval: 10s
+            timeout: 5s
+            retries: 10
+            start_period: 20s
+
+volumes:
+    mysql-data:
+        driver: local
+
+name: watchers-hub
