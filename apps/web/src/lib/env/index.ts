@@ -9,6 +9,7 @@ export const env = createEnv({
 	server: {
 		API_URL: z.url(),
 		TMDB_API_KEY: z.string(),
+		NODE_ENV: z.enum(["development", "test", "production"]),
 	},
 	experimental__runtimeEnv: {
 		BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
