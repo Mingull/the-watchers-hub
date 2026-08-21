@@ -10,7 +10,7 @@ if (!databaseUrl) {
 const pool = mysql.createPool(databaseUrl);
 
 export const db = drizzle({
-	client: pool,
+	client: pool.pool,
 	relations,
 });
 
