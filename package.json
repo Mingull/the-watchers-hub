@@ -10,7 +10,8 @@
 		"check-types": "turbo run check-types",
 		"changeset": "changeset",
 		"version:packages": "changeset version",
-		"release": "changeset publish"
+		"release": "changeset publish",
+		"drizzle": "pnpm --filter @mingull/database drizzle"
 	},
 	"devDependencies": {
 		"prettier": "^3.9.6",

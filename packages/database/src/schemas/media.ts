@@ -10,5 +10,5 @@ export const media = mysqlTable("media", {
 	title: varchar("title", { length: 255 }).notNull(),
 	posterPath: varchar("poster_path", { length: 255 }),
 	createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
-	updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow().notNull(),
+	updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow({ fsp: 3 }).notNull(),
 });

@@ -6,10 +6,10 @@ export const users = mysqlTable("users", {
 	email: varchar("email", { length: 255 }).notNull().unique(),
 	emailVerified: boolean("email_verified").default(false).notNull(),
 	image: text("image"),
-	createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
-	updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow().notNull(),
 	role: text("role"),
 	banned: boolean("banned").default(false),
 	banReason: text("ban_reason"),
 	banExpires: timestamp("ban_expires", { fsp: 3 }),
+	createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
+	updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow({ fsp: 3 }).notNull(),
 });

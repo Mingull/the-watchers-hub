@@ -18,9 +18,7 @@ export const accounts = mysqlTable(
 		scope: text("scope"),
 		password: text("password"),
 		createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
-		updatedAt: timestamp("updated_at", { fsp: 3 })
-			.$onUpdate(() => /* @__PURE__ */ new Date())
-			.notNull(),
+		updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow({ fsp: 3 }).notNull(),
 	},
 	(table) => [index("accounts_userId_idx").on(table.userId)],
 );

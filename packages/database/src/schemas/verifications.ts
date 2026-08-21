@@ -8,7 +8,7 @@ export const verifications = mysqlTable(
 		value: text("value").notNull(),
 		expiresAt: timestamp("expires_at", { fsp: 3 }).notNull(),
 		createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
-		updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow().notNull(),
+		updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow({ fsp: 3 }).notNull(),
 	},
 	(table) => [index("verifications_identifier_idx").on(table.identifier)],
 );

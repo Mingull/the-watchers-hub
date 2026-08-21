@@ -2,8 +2,8 @@ import { boolean, int, mysqlTable, primaryKey, timestamp, varchar } from "drizzl
 import { media } from "./media";
 import { users } from "./users";
 
-export const userMedias = mysqlTable(
-	"user_medias",
+export const userMedia = mysqlTable(
+	"user_media",
 	{
 		userId: varchar("user_id", { length: 36 })
 			.references(() => users.id, { onDelete: "cascade" })
@@ -15,11 +15,7 @@ export const userMedias = mysqlTable(
 		rating: int("rating"),
 		favorite: boolean("favorite").default(false).notNull(),
 		createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
-		updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow().notNull(),
+		updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow({ fsp: 3 }).notNull(),
 	},
-	(table) => [
-		primaryKey({
-			columns: [table.userId, table.mediaId],
-		}),
-	],
+	(table) => [primaryKey({ columns: [table.userId, table.mediaId] })],
 );
