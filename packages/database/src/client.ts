@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { drizzle } from "drizzle-orm/mysql2";
 import mysql from "mysql2/promise";
 import { relations } from "./relations";
@@ -8,11 +7,11 @@ if (!databaseUrl) {
 	throw new Error("DATABASE_URL is not set");
 }
 
-const pool = mysql.createPool(process.env.DATABASE_URL!);
+const pool = mysql.createPool(databaseUrl);
 
 export const db = drizzle({
-	client: pool.pool,
-	relations: relations,
+	client: pool,
+	relations,
 });
 
 export type Transaction = Parameters<Parameters<typeof db.transaction>[0]>[0];

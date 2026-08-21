@@ -5,7 +5,7 @@ services:
         restart: unless-stopped
         environment:
             MYSQL_ALLOW_EMPTY_PASSWORD: "no"
-            MYSQL_ROOT_PASSWORD: root # only for development purposes, change in production
+            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-root}" # dev default; override via env
             MYSQL_DATABASE: watchers_hub
             MYSQL_ROOT_HOST: "%"
         ports:

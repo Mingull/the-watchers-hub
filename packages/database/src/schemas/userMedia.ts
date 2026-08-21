@@ -11,7 +11,7 @@ export const userMedia = mysqlTable(
 		mediaId: varchar("media_id", { length: 36 })
 			.references(() => media.id, { onDelete: "cascade" })
 			.notNull(),
-		status: varchar("status", { length: 10, enum: ["planned", "watching", "completed", "dropped"] }).notNull(), // movie | tv
+		status: varchar("status", { length: 10, enum: ["planned", "watching", "completed", "dropped"] }).notNull(), // planned | watching | completed | dropped
 		rating: int("rating"),
 		favorite: boolean("favorite").default(false).notNull(),
 		createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
