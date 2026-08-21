@@ -30,7 +30,7 @@ export function Header({ locale, items }: HeaderProps) {
 	return (
 		<m.header initial={{ opacity: 0, y: -14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: "easeOut" }} className="sticky top-2.5 z-50 backdrop-blur-xl">
 			<div className="bg-background/30 mx-auto flex h-16 max-w-6xl items-center justify-between rounded-4xl border px-6">
-				<Link href={{ pathname: "/" }} locale={locale} className="font-special text-lg leading-none tracking-wide">
+				<Link href={{ pathname: "/" }} locale={locale} className="font-mono tracking-tight text-lg leading-none">
 					The Watchers Hub
 				</Link>
 
