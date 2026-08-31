@@ -8,11 +8,12 @@ import { HeroContent } from "./hero-content";
 type HeroSectionProps = {
 	hasQuery: boolean;
 	query: string;
+	resultsCount?: number;
 	onQueryChange: (value: string) => void;
 	children?: ReactNode;
 };
 
-export function HeroSection({ hasQuery, query, onQueryChange, children }: HeroSectionProps) {
+export function HeroSection({ hasQuery, query, resultsCount, onQueryChange, children }: HeroSectionProps) {
 	return (
 		<m.div
 			className="mx-auto w-full max-w-5xl"
@@ -27,7 +28,7 @@ export function HeroSection({ hasQuery, query, onQueryChange, children }: HeroSe
 			<HeroContent hasQuery={hasQuery} />
 
 			<m.div layout transition={{ type: "spring", stiffness: 240, damping: 28 }}>
-				<SearchInput value={query} onChange={onQueryChange} />
+				<SearchInput value={query} onChange={onQueryChange} resultsCount={resultsCount} />
 			</m.div>
 
 			{children}

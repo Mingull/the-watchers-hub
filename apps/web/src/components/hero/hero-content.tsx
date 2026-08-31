@@ -2,6 +2,7 @@
 
 import { Badge } from "@mingull/ui/components/badge";
 import * as m from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 type HeroContentProps = {
 	hasQuery: boolean;
@@ -12,6 +13,7 @@ const titleVariants = { idle: { fontSize: "3.5rem", lineHeight: 1 }, searching: 
 const subtitleVariants = { idle: { fontSize: "1rem" }, searching: { fontSize: "0.95rem" } };
 
 export function HeroContent({ hasQuery = false }: HeroContentProps) {
+	const t = useTranslations("homepage.hero");
 	return (
 		<m.div layout className="mb-8 text-center" variants={{ idle: { marginBottom: 112 }, searching: { marginBottom: 56 } }} animate={hasQuery ? "searching" : "idle"}>
 			<m.p
@@ -21,7 +23,7 @@ export function HeroContent({ hasQuery = false }: HeroContentProps) {
 				transition={{ type: "spring", stiffness: 280, damping: 32 }}
 				className="text-muted-foreground font-mono font-semibold uppercase"
 			>
-				The Watchers Hub
+				{t("eyebrow")}
 			</m.p>
 
 			<m.h1
@@ -31,9 +33,10 @@ export function HeroContent({ hasQuery = false }: HeroContentProps) {
 				transition={{ type: "spring", stiffness: 250, damping: 30 }}
 				className="font-serif font-bold tracking-tight"
 			>
-				Every Universe. Every Story.
-				<br />
-				One Timeline. One <span className="text-primary">Watcher</span>.
+				{t.rich("title", {
+					br: () => <br />,
+					special: (children) => <span className="text-primary">{children}</span>,
+				})}
 			</m.h1>
 
 			<m.p
@@ -43,7 +46,7 @@ export function HeroContent({ hasQuery = false }: HeroContentProps) {
 				transition={{ type: "spring", stiffness: 250, damping: 30 }}
 				className="text-muted-foreground mx-auto max-w-2xl"
 			>
-				Track what you've watched, continue where you left off, discover what's next, and explore every timeline.
+				{t("subtitle")}
 			</m.p>
 
 			<m.div
@@ -54,13 +57,13 @@ export function HeroContent({ hasQuery = false }: HeroContentProps) {
 				className="mt-7 flex flex-wrap items-center justify-center gap-2"
 			>
 				<Badge variant="outline" className="text-muted-foreground">
-					Watch Tracking
+					{t("badges.one")}
 				</Badge>
 				<Badge variant="outline" className="text-muted-foreground">
-					Franchise Timelines
+					{t("badges.two")}
 				</Badge>
 				<Badge variant="outline" className="text-muted-foreground">
-					Personal History
+					{t("badges.three")}
 				</Badge>
 			</m.div>
 		</m.div>

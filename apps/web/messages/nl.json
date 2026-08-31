@@ -1,3 +1,25 @@
 {
-	"hello": "Hallo Wereld!"
+	"header": {
+		"title": "The Watchers Hub",
+		"items": {
+			"timelines": "Tijdlijnen",
+			"sign-in": "Inloggen"
+		}
+	},
+	"homepage": {
+		"hero": {
+			"eyebrow": "The Watchers Hub",
+			"title": "Elk Universum. Elk Verhaal.<br></br>Een Tijdlijn. Een <special>Watcher</special>.",
+			"subtitle": "Houd bij wat je hebt bekeken, ga verder waar je was gebleven, ontdek wat het volgende is en verken elke tijdlijn.",
+			"badges": {
+				"one": "Mediabibliotheek",
+				"two": "Franchise-tijdlijnen",
+				"three": "Persoonlijke geschiedenis"
+			}
+		},
+		"search": {
+			"placeholder": "Zoek films en series...",
+			"results": "{count, plural, =0 {Geen resultaten} one {# resultaat} other {# resultaten}}"
+		}
+	}
 }

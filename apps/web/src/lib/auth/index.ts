@@ -1,8 +1,8 @@
+import { env } from "@/lib/env";
+import { drizzleAdapter } from "@better-auth/drizzle-adapter";
 import { db } from "@mingull/database/client";
 import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "@better-auth/drizzle-adapter";
 import { admin, lastLoginMethod } from "better-auth/plugins";
-import { env } from "@/lib/env";
 
 export const auth = betterAuth({
 	database: drizzleAdapter(db, {
@@ -17,3 +17,5 @@ export const auth = betterAuth({
 	experimental: { joins: true },
 	plugins: [admin(), lastLoginMethod()],
 });
+
+export type Session = typeof auth.$Infer.Session;

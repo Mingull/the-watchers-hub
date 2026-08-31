@@ -1,4 +1,4 @@
-import { Locale, NextIntlClientProvider } from "next-intl";
+import { type Locale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 export async function IntlProvider({ locale, children }: Readonly<{ locale: Locale; children: React.ReactNode }>) {
