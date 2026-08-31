@@ -7,3 +7,7 @@ allowBuilds:
   esbuild: true
   sharp: set this to true or false
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@better-auth/core@1.7.2'
+patchedDependencies:
+  next-themes@0.4.6: patches/next-themes@0.4.6.patch

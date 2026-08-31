@@ -1,4 +1,5 @@
 "use client";
+
 import { ThemeProvider } from "next-themes";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { ToastProvider } from "./toast-provider";

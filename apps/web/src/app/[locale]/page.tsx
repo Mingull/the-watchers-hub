@@ -53,7 +53,7 @@ export default function HomePage(_props: PageProps<"/[locale]">) {
 
 	return (
 		<section className="min-h-screen">
-			<HeroSection hasQuery={hasQuery} query={query} onQueryChange={setQuery}>
+			<HeroSection hasQuery={hasQuery} query={query} onQueryChange={setQuery} resultsCount={results?.totalResults ?? 0}>
 				{hasQuery && <SearchResults query={query} results={results} isLoading={isLoading} />}
 			</HeroSection>
 		</section>

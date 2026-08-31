@@ -1,4 +1,4 @@
-import { Header, type HeaderItem } from "@/components/header";
+import { Header } from "@/components/header";
 import Providers from "@/components/providers";
 import { IntlProvider } from "@/components/providers/intl-provider";
 import { routing } from "@/i18n/routing";
@@ -32,26 +32,6 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
 		notFound();
 	}
 
-	const headerItems = [
-		{
-			type: "dropdown",
-			title: "Explore",
-			items: [
-				{ title: "Browse", href: "/" },
-				{ title: "Movies", href: "/movies" },
-				{ title: "Series", href: "/series" },
-			],
-		},
-		{
-			type: "dropdown",
-			title: "Watchlist",
-			items: [
-				{ title: "Movies", href: "/watchlist/movies" },
-				{ title: "Series", href: "/watchlist/series" },
-			],
-		},
-	] satisfies HeaderItem[];
-
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<head>
@@ -66,16 +46,15 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
 					leckerliOne.variable,
 				)}
 			>
-				<Suspense>
-					<IntlProvider locale={locale}>
-						<Providers>
-							<Header locale={locale} items={headerItems} />
+				<Providers>
+					<Suspense>
+						<IntlProvider locale={locale}>
+							<Header locale={locale} />
 							<main className="grow">{children}</main>
 							{/* <Footer /> */}
-						</Providers>
-						{/* </DefaultsProvider> */}
-					</IntlProvider>
-				</Suspense>
+						</IntlProvider>
+					</Suspense>
+				</Providers>
 			</body>
 		</html>
 	);

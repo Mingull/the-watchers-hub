@@ -21,7 +21,7 @@ export const relations = defineRelations(schemas, (r) => ({
 		users: r.many.users(),
 		watchers: r.many.watchHistory({
 			from: r.media.id.through(r.watchHistory.mediaId),
-			to: r.users.id.through(r.watchHistory.userId),
+			to: r.watchHistory.id.through(r.watchHistory.userId),
 		}),
 	},
 	userMedia: {
