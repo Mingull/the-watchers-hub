@@ -2,7 +2,6 @@
 
 import { Search } from "lucide-react";
 
-import { Input } from "@mingull/ui/c/input";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@mingull/ui/components/input-group";
 import { useTranslations } from "next-intl";
 

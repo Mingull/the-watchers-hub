@@ -5,6 +5,6 @@
 			"@mingull/ui/*": ["./src/*"]
 		}
 	},
-	"include": [".", "../../apps/web/src/components/header/index.tsx"],
+	"include": ["."],
 	"exclude": ["node_modules", "dist"]
 }
