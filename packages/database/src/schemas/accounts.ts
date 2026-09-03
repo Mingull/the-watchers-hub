@@ -1,10 +1,11 @@
-import { index, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { index, mysqlTable, text, timestamp, uniqueIndex, varchar } from "drizzle-orm/mysql-core";
 import { users } from "./users";
 
 export const accounts = mysqlTable(
 	"accounts",
 	{
 		id: varchar("id", { length: 36 }).primaryKey(),
+		issuer: varchar("issuer", { length: 191 }).notNull(),
 		accountId: text("account_id").notNull(),
 		providerId: text("provider_id").notNull(),
 		userId: varchar("user_id", { length: 36 })
@@ -20,5 +21,5 @@ export const accounts = mysqlTable(
 		createdAt: timestamp("created_at", { fsp: 3 }).defaultNow().notNull(),
 		updatedAt: timestamp("updated_at", { fsp: 3 }).defaultNow().onUpdateNow({ fsp: 3 }).notNull(),
 	},
-	(table) => [index("accounts_userId_idx").on(table.userId)],
+	(table) => [uniqueIndex("accounts_issuer_accountId_uidx").on(table.issuer, table.accountId), index("accounts_userId_idx").on(table.userId)],
 );

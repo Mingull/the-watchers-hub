@@ -1,0 +1,32 @@
+{
+	"name": "@mingull/icons",
+	"version": "0.0.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"generate": "tsx scripts/generate.ts",
+		"lint": "eslint .",
+		"check-types": "tsc --noEmit",
+		"start": "node dist/index.js"
+	},
+	"dependencies": {
+		"react": "19.2.8",
+		"react-dom": "19.2.8"
+	},
+	"devDependencies": {
+		"@mingull/eslint-config": "workspace:*",
+		"@mingull/registry": "workspace:*",
+		"@mingull/typescript-config": "workspace:*",
+		"@tailwindcss/postcss": "^4.3.3",
+		"@turbo/gen": "^2.10.12",
+		"@types/node": "^26.4.0",
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.5",
+		"eslint": "^10.9.1",
+		"tsdown": "^0.22.14"
+	},
+	"exports": {
+		".": "./src/index.ts",
+		"./native": "./src/native/index.ts"
+	}
+}

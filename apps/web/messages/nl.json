@@ -1,4 +1,9 @@
 {
+	"metadata": {
+		"template": "%s | The Watchers Hub",
+		"title": "The Watchers Hub",
+		"description": "Jouw persoonlijke entertainment-hub voor het ontdekken, bijhouden en organiseren van films en series."
+	},
 	"header": {
 		"title": "The Watchers Hub",
 		"items": {
@@ -20,6 +25,23 @@
 		"search": {
 			"placeholder": "Zoek films en series...",
 			"results": "{count, plural, =0 {Geen resultaten} one {# resultaat} other {# resultaten}}"
+		}
+	},
+	"auth": {
+		"sign-up": {
+			"title": "Registreren voor {title}",
+			"subtitle": "Maak een account aan om door te gaan naar {title}",
+			"divider": "of",
+			"username": "Gebruikersnaam",
+			"email": "E-mailadres",
+			"password": "Wachtwoord",
+			"confirmPassword": "Bevestig wachtwoord",
+			"button": "Registreren",
+			"continue": "Doorgaan met {provider}",
+			"have-account": "Heb je al een account?",
+			"linkText": "Inloggen",
+			"tos": "Door je aan te melden, ga je akkoord met onze <tos>Terms of Service</tos> en <privacy>Privacy Policy</privacy>.",
+			"name": "Naam"
 		}
 	}
 }

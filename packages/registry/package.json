@@ -1,0 +1,25 @@
+{
+	"name": "@mingull/registry",
+	"version": "0.0.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"lint": "eslint .",
+		"test": "vitest run",
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"zod": "^4.5.4"
+	},
+	"devDependencies": {
+		"@mingull/eslint-config": "workspace:*",
+		"@mingull/typescript-config": "workspace:*",
+		"@types/node": "^26.4.0",
+		"eslint": "^10.9.1",
+		"tsdown": "^0.22.14",
+		"vitest": "^4.1.11"
+	},
+	"exports": {
+		".": "./src/index.ts"
+	}
+}

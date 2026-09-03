@@ -1,4 +1,3 @@
-import { Header } from "@/components/header";
 import Providers from "@/components/providers";
 import { IntlProvider } from "@/components/providers/intl-provider";
 import { routing } from "@/i18n/routing";
@@ -6,6 +5,7 @@ import "@mingull/ui/globals.css";
 import { cn } from "@mingull/ui/lib/utils";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Leckerli_One, Merriweather, Poppins, Roboto_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -20,9 +20,11 @@ export function generateStaticParams() {
 }
 
 export const generateMetadata = async (): Promise<Metadata> => {
+	const t = await getTranslations("metadata");
+
 	return {
-		title: { template: "%s | The Watchers Hub", default: "The Watchers Hub" },
-		description: "Your personal entertainment hub for discovering, tracking, and organizing movies and series.",
+		title: { template: t("template"), default: t("title") },
+		description: t("description"),
 	};
 };
 
@@ -48,11 +50,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
 			>
 				<Providers>
 					<Suspense>
-						<IntlProvider locale={locale}>
-							<Header locale={locale} />
-							<main className="grow">{children}</main>
-							{/* <Footer /> */}
-						</IntlProvider>
+						<IntlProvider locale={locale}>{children}</IntlProvider>
 					</Suspense>
 				</Providers>
 			</body>
