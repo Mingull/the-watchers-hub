@@ -14,9 +14,9 @@
 		"drizzle": "pnpm --filter @mingull/database drizzle"
 	},
 	"devDependencies": {
-		"prettier": "^3.9.6",
+		"prettier": "^3.9.7",
 		"prettier-plugin-tailwindcss": "^0.8.1",
-		"turbo": "^2.10.12",
+		"turbo": "^2.10.13",
 		"typescript": "7.0.2"
 	},
 	"packageManager": "pnpm@11.24.0",
