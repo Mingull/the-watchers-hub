@@ -93,18 +93,18 @@ export function Header({ locale }: HeaderProps) {
 											</m.p>
 										</NavigationMenuTrigger>
 										<NavigationMenuContent className="w-56">
-{category.items?.map((item) => (
-	<NavigationMenuLink key={item.href} asChild>
-		<Link
-			// @ts-expect-error
-			href={{ pathname: item.href }}
-			locale={locale}
-			title={item.title}
-		>
-			{item.title}
-		</Link>
-	</NavigationMenuLink>
-))}
+											{category.items?.map((item) => (
+												<NavigationMenuLink key={item.href} asChild>
+													<Link
+														// @ts-expect-error
+														href={{ pathname: item.href }}
+														locale={locale}
+														title={item.title}
+													>
+														{item.title}
+													</Link>
+												</NavigationMenuLink>
+											))}
 										</NavigationMenuContent>
 									</NavigationMenuItem>
 								);

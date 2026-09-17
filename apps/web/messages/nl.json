@@ -31,17 +31,44 @@
 		"sign-up": {
 			"title": "Registreren voor {title}",
 			"subtitle": "Maak een account aan om door te gaan naar {title}",
+			"steps": {
+				"credentials": {
+					"title": "Maak je account aan",
+					"subtitle": "Je e-mailadres en wachtwoord worden gebruikt om in te loggen op The Watchers Hub.",
+					"fields": {
+						"email": { "label": "E-mail", "placeholder": "jouw@email.com" },
+						"password": { "label": "Wachtwoord", "placeholder": "••••••••" },
+						"confirmPassword": { "label": "Wachtwoord bevestigen", "placeholder": "••••••••" }
+					}
+				},
+				"personal-info": {
+					"title": "Je profiel instellen",
+					"subtitle": "Vertel ons iets over jezelf.",
+					"fields": {
+						"first-name": { "label": "Voornaam", "placeholder": "John" },
+						"last-name": { "label": "Achternaam", "placeholder": "Doe" },
+						"username": { "label": "Gebruikersnaam", "placeholder": "johndoe" }
+					}
+				},
+				"preferences": {
+					"title": "Personaliseer je ervaring",
+					"subtitle": "Kies de franchises en genres waarin je geïnteresseerd bent. Je kunt dit voorlopig overslaan.",
+					"fields": {
+						"franchises": { "label": "Franchises", "placeholder": "Selecteer je favoriete franchises" },
+						"genres": { "label": "Genres", "placeholder": "Selecteer je favoriete genres" }
+					}
+				}
+			},
+			"actions": {
+				"back": "Terug",
+				"next": "Volgende",
+				"create": "Account Aanmaken"
+			},
 			"divider": "of",
-			"username": "Gebruikersnaam",
-			"email": "E-mailadres",
-			"password": "Wachtwoord",
-			"confirmPassword": "Bevestig wachtwoord",
-			"button": "Registreren",
 			"continue": "Doorgaan met {provider}",
 			"have-account": "Heb je al een account?",
 			"linkText": "Inloggen",
-			"tos": "Door je aan te melden, ga je akkoord met onze <tos>Terms of Service</tos> en <privacy>Privacy Policy</privacy>.",
-			"name": "Naam"
+			"tos": "Door je aan te melden, ga je akkoord met onze <tos>Terms of Service</tos> en <privacy>Privacy Policy</privacy>."
 		}
 	}
 }

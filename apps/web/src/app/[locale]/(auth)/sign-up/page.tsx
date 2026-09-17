@@ -14,7 +14,7 @@ export default function SignUpPage() {
 			<div className="absolute top-4 right-4 z-20">
 				<LanguageSelector />
 			</div>
-			<div className="relative z-10 w-full max-w-md">
+			<div className="relative z-10 w-full max-w-3xl">
 				<SignupForm />
 			</div>
 			{/* Here comes background if possible */}

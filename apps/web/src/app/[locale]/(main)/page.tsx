@@ -2,8 +2,8 @@
 
 import { HeroSection } from "@/components/hero/hero-section";
 import { SearchResults } from "@/components/search/search-results";
-import { searchMediaAction } from "@/lib/actions/search";
 import type { SearchMediaResult } from "@/lib/tmdb/search";
+import { searchMediaAction } from "@/server/search";
 import { useDebounce } from "@mingull/ui/hooks/use-debounce";
 import { useQueryState } from "nuqs";
 import { useEffect, useState } from "react";

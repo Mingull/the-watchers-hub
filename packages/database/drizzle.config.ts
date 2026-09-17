@@ -8,8 +8,7 @@ const filePath = fileURLToPath(import.meta.url);
 const fileDir = dirname(filePath);
 
 // Load env from workspace/app locations to avoid package-level config drift.
-loadEnv({ path: resolve(fileDir, "../../apps/web/.env.local") });
-loadEnv({ path: resolve(fileDir, "../../apps/web/.env") });
+loadEnv({ path: [resolve(fileDir, "../../apps/web/.env.local"), resolve(fileDir, "../../apps/web/.env")] });
 
 const databaseUrl = process.env.DATABASE_URL;
 

@@ -11,8 +11,8 @@ export const sharedSignUpForm = formOptions({
 		} satisfies z.infer<typeof stepOneSchema> as z.infer<typeof stepOneSchema>,
 		stepTwo: {
 			username: "",
-			firstname: "",
-			lastname: "",
+			firstName: "",
+			lastName: "",
 		} satisfies z.infer<typeof stepTwoSchema> as z.infer<typeof stepTwoSchema>,
 		stepThree: {
 			interestedFranchises: [],
@@ -20,6 +20,6 @@ export const sharedSignUpForm = formOptions({
 		} satisfies z.infer<typeof stepThreeSchema> as z.infer<typeof stepThreeSchema>,
 	},
 	props: {
-		className: "",
+		className: "" 
 	},
 });

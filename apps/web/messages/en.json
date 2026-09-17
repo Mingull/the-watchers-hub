@@ -31,17 +31,44 @@
 		"sign-up": {
 			"title": "Sign Up for {title}",
 			"subtitle": "Create an account to continue to {title}",
+			"steps": {
+				"credentials": {
+					"title": "Create your account",
+					"subtitle": "Your email and password will be used to sign in to The Watchers Hub.",
+					"fields": {
+						"email": { "label": "Email", "placeholder": "you@example.com" },
+						"password": { "label": "Password", "placeholder": "••••••••" },
+						"confirmPassword": { "label": "Confirm Password", "placeholder": "••••••••" }
+					}
+				},
+				"personal-info": {
+					"title": "Set up your profile",
+					"subtitle": "Tell us a little about yourself.",
+					"fields": {
+						"first-name": { "label": "First name", "placeholder": "John" },
+						"last-name": { "label": "Last name", "placeholder": "Doe" },
+						"username": { "label": "Username", "placeholder": "johndoe" }
+					}
+				},
+				"preferences": {
+					"title": "Personalize your experience",
+					"subtitle": "Choose the franchises and genres you're interested in. You can skip this for now.",
+					"fields": {
+						"franchises": { "label": "Franchises", "placeholder": "Select your favorite franchises" },
+						"genres": { "label": "Genres", "placeholder": "Select your favorite genres" }
+					}
+				}
+			},
+			"actions": {
+				"back": "Back",
+				"next": "Next",
+				"create": "Create Account"
+			},
 			"divider": "or",
-			"username": "Username",
-			"email": "Email",
-			"password": "Password",
-			"confirmPassword": "Confirm Password",
-			"button": "Sign Up",
 			"continue": "Continue with {provider}",
 			"have-account": "Already have an account?",
 			"linkText": "Sign In",
-			"tos": "By clicking sign up, you agree to our <tos>Terms of Service</tos> and <privacy>Privacy Policy</privacy>.",
-			"name": "Name"
+			"tos": "By clicking sign up, you agree to our <tos>Terms of Service</tos> and <privacy>Privacy Policy</privacy>."
 		}
 	}
 }

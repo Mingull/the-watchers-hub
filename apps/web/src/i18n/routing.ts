@@ -8,5 +8,7 @@ export const routing = defineRouting({
 	defaultLocale: "en",
 	pathnames: {
 		"/": "/",
+		"/sign-up": "/sign-up",
+		"/sign-in": "/sign-in",
 	},
 });
