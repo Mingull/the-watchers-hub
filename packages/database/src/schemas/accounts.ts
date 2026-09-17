@@ -6,7 +6,7 @@ export const accounts = mysqlTable(
 	{
 		id: varchar("id", { length: 36 }).primaryKey(),
 		issuer: varchar("issuer", { length: 191 }).notNull(),
-		accountId: text("account_id").notNull(),
+		accountId: varchar("account_id", { length: 191 }).notNull(),
 		providerId: text("provider_id").notNull(),
 		userId: varchar("user_id", { length: 36 })
 			.notNull()

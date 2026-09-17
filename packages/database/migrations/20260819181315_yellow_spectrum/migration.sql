@@ -1,6 +1,7 @@
 CREATE TABLE `accounts` (
 	`id` varchar(36) PRIMARY KEY,
-	`account_id` text NOT NULL,
+	`issuer` varchar(191) NOT NULL,
+	`account_id` varchar(191) NOT NULL,
 	`provider_id` text NOT NULL,
 	`user_id` varchar(36) NOT NULL,
 	`access_token` text,
@@ -40,9 +41,9 @@ CREATE TABLE `sessions` (
 --> statement-breakpoint
 CREATE TABLE `users` (
 	`id` varchar(36) PRIMARY KEY,
-	`name` varchar(255) NOT NULL,
 	`email` varchar(255) NOT NULL,
 	`email_verified` boolean NOT NULL DEFAULT false,
+	`name` varchar(255) NOT NULL,
 	`image` text,
 	`role` text,
 	`banned` boolean DEFAULT false,
