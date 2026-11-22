@@ -1,95 +1,27 @@
 # Watchers Hub
 
-**Watchers Hub** is a personal entertainment hub for keeping track of the movies, series, episodes, and eventually music that I consume.
+**Watchers Hub** is a platform for exploring entertainment franchises through curated chronological timelines and keeping track of your viewing progress.
 
-The goal is to have one place where I can keep track of what I've watched, discover what to watch next, and explore the timelines and connections between different franchises.
+Choose a franchise, explore its timeline, and follow the events in the order they take place within its universe. Track which movies, series, episodes, specials and other media you've watched, where you left off, and how many times you've completed an entire franchise.
 
-## Features
+Watch alone or create shared timelines with friends and family to follow a franchise together.
 
-### Movies & Series
+## Core Features
 
-- Keep track of which movies I have watched.
-- Keep track of which episodes I have watched.
-- Track progress through TV series and individual seasons.
-- Add movies and series to a personal watchlist.
-- Rate and favorite movies and series.
-- View where a movie or series is currently available to stream.
-- Use TMDB as the external source for movie and series metadata.
+### Franchise Exploration
 
-### Franchise Timelines
+Watchers Hub is organized around entertainment franchises rather than individual movies or series.
 
-A major feature of Watchers Hub is having useful timelines for large movie and TV franchises.
+Users can explore different franchises, each with its own curated timeline and associated media.
 
-Rather than simply displaying movies in release order or putting them side-by-side chronologically, timelines should represent the **actual in-universe chronology**.
+Initial franchises include:
 
-For example:
+- **Marvel Cinematic Universe (MCU)**
+- **Arrowverse**
+- **DC Extended Universe (DCEU)**
+- **DC Universe (DCU)**
 
-```text
-1990
-│
-├── Movie 1
-│
-1992
-│
-├── Movie 2
-├── Movie 3
-│
-1999
-│
-└── Movie 4
-```
-
-Movies and series should therefore be grouped by the year or period in which their story takes place, making it easier to understand how the events of a franchise fit together.
-
-### Marvel
-
-For Marvel, Watchers Hub should provide:
-
-- An in-universe chronological timeline.
-- Movies and series grouped by the year/period they take place in.
-- Marvel phases displayed separately.
-- The ability to view the franchise in both **timeline order** and **phase/release order**.
-
-For example:
-
-```text
-MCU
-
-Phase One
-├── Iron Man
-├── The Incredible Hulk
-├── Iron Man 2
-├── Thor
-└── Captain America: The First Avenger
-
-Timeline
-├── 1940s
-│   └── Captain America: The First Avenger
-├── 2010
-│   └── Iron Man
-├── 2011
-│   ├── Iron Man 2
-│   ├── Thor
-│   └── ...
-└── ...
-```
-
-### DC
-
-DC should have separate timelines for its different cinematic universes.
-
-Initially this includes:
-
-- **DCEU**
-- **James Gunn's DC Universe (DCU)**
-
-The same timeline concept should be used for both: events should be positioned according to when they take place within the universe rather than simply by release date.
-
-### Other Franchises
-
-The timeline system should not be designed specifically for Marvel or DC.
-
-It should eventually support **any franchise with a meaningful chronology**, for example:
+The platform should not be limited to these franchises. It should eventually support any franchise with a meaningful chronology, such as:
 
 - Star Wars
 - Harry Potter / Wizarding World
@@ -100,57 +32,115 @@ It should eventually support **any franchise with a meaningful chronology**, for
 - Transformers
 - Mission: Impossible
 - Fast & Furious
-- etc.
 
-Each franchise can have its own chronology, eras, phases, universes, or other organizational structure where appropriate.
+### Franchise Timelines
 
-## Personal Entertainment
+The timeline is the central feature of Watchers Hub.
 
-Watchers Hub should eventually expand beyond movies and series.
+Each franchise has a curated timeline containing all relevant media, organized according to when the events take place within its universe rather than their release dates.
 
-### Music
+Supported media types include:
 
-A future version may integrate with Spotify to provide a similar personal tracking experience for music.
+- Movies
+- Television series and seasons
+- Individual episodes
+- One-Shots
+- Special Presentations
+- Other franchise-related media where appropriate
+
+Timelines should support franchise-specific organizational structures, including:
+
+- Chronological order
+- Phases and eras
+- Different universes and continuities
+- Alternate timelines and branches
+
+The timeline should make it easy to understand how different entries connect and where each one belongs within the larger franchise.
+
+### Viewing Progress
+
+Users can track their progress through every franchise.
+
+Features include:
+
+- Mark movies and other standalone entries as watched.
+- Track individual episodes within television series.
+- Keep track of progress through seasons and series.
+- Save playback positions to resume where they left off.
+- See which entries are completed, in progress or not yet watched.
+- Track how many times an entry has been watched.
+
+Progress should be maintained per user and associated with the relevant franchise timeline.
+
+### Franchise Completion
+
+Watchers Hub should track more than individual viewing progress.
+
+Users should be able to complete an entire franchise timeline and keep a history of their completed runs.
+
+This includes:
+
+- Overall franchise completion percentage.
+- Number of completed entries.
+- Number of times an entire franchise has been completed.
+- Previous completion history.
+- Current progress through a new run.
+
+This makes it possible to revisit a franchise without losing the history of previous viewing sessions.
+
+### Profiles & Statistics
+
+Each user has a profile that displays their viewing activity and achievements.
+
+Potential profile information includes:
+
+- Followed franchises.
+- Completed franchises.
+- Total watched movies, episodes and specials.
+- Total viewing time.
+- Franchise completion counts.
+- Viewing history.
+- Personal favorites and ratings.
+
+Profiles should provide an overview of a user's entertainment activity and progress across different franchises.
+
+### Shared Timelines & Watchparties
+
+Users should be able to create shared timelines with friends or family.
+
+A shared timeline allows multiple people to follow the same franchise together while maintaining their own individual viewing progress.
 
 Potential features include:
 
-- Recently played tracks.
-- Listening history.
-- Favorite artists.
-- Favorite albums.
-- Listening statistics.
-- Top artists and tracks.
-- Yearly listening summaries.
+- Create private groups with friends or family.
+- Invite other users to a shared timeline.
+- Follow the same franchise chronology.
+- See each member's individual viewing progress.
+- View shared group progress.
+- Track completed franchise runs together.
 
-The goal is for Watchers Hub to eventually become a **personal entertainment hub**, rather than only a movie tracker.
+The goal is to make it easier to experience large franchises together without requiring everyone to maintain separate, disconnected watchlists.
 
 ## Data Sources
 
 ### TMDB
 
-TMDB will be used as the primary source for movie and TV metadata, including information such as:
+[The Movie Database (TMDB)](https://www.themoviedb.org/) will be the primary source for movie and television metadata.
 
-- Titles
-- Release dates
-- Descriptions
-- Posters and backdrops
-- Cast and crew
-- Genres
-- Seasons and episodes
-- Streaming providers
-- Other movie/TV metadata
+This includes:
 
-Watchers Hub will store only the data that is relevant to the application's own functionality. TMDB remains the source of truth for the majority of media metadata.
+- Titles and descriptions.
+- Release dates.
+- Posters and backdrops.
+- Cast and crew.
+- Genres.
+- Seasons and episodes.
+- Streaming providers.
+- Other movie and television metadata.
 
-Frequently requested TMDB data can later be cached using Redis if necessary.
+TMDB provides media information, while Watchers Hub maintains its own curated franchise timelines and viewing order.
 
-### Future Data Sources
-
-Other services may be integrated in the future, such as:
-
-- Spotify
-- Other streaming services
-- Additional media databases
+The application should only store the external metadata necessary for its own functionality. Frequently requested data may be cached using Redis in the future.
 
 ## Tech Stack
 
@@ -171,7 +161,6 @@ Other services may be integrated in the future, such as:
 ### External APIs
 
 - **TMDB API**
-- **Spotify API** _(planned)_
 
 ### Tooling
 
@@ -179,21 +168,33 @@ Other services may be integrated in the future, such as:
 - **pnpm**
 - **Docker Compose**
 
-Docker is currently only intended to run the PostgreSQL database during development.
+Docker is currently intended to run PostgreSQL during development.
 
 ## Project Goals
 
-The main goal of Watchers Hub is not to build another generic movie database.
+The main goal of Watchers Hub is to provide a central place to experience and track entertainment franchises.
 
-It should become a **personal entertainment dashboard** that makes it easy to:
+It should make it easy to:
 
-- Keep track of what I have watched.
-- Keep track of what I want to watch.
-- Track progress through series.
-- Explore franchises.
-- Understand franchise timelines.
-- See how different movies and series connect.
-- View personal entertainment statistics.
-- Eventually track music and other forms of entertainment.
+- Explore different entertainment franchises.
+- Follow curated in-universe chronological timelines.
+- Discover how movies, series and other media connect.
+- Track individual viewing progress.
+- Resume movies and episodes where you left off.
+- Complete franchises multiple times and preserve completion history.
+- View personal viewing statistics.
+- Share timelines and viewing experiences with friends and family.
 
-The project should also be a place to experiment with new technologies and ideas while building something that I actually want to use.
+Watchers Hub should focus on the experience of following and completing franchises, rather than becoming another generic movie database.
+
+## Future potential features
+
+### Streaming Service Integrations
+
+A potential future feature is connecting streaming services such as Netflix, Disney+ and Prime Video.
+
+Where supported, Watchers Hub could automatically synchronize viewing activity and update a user's progress through franchise timelines.
+
+This would reduce the need for manually marking movies and episodes as watched.
+
+Availability would depend on the APIs and integration capabilities provided by each streaming service.
